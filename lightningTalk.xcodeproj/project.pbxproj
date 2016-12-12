@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AEDE0DAF1DFF1AC300C079B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE0DAE1DFF1AC300C079B7 /* AppDelegate.swift */; };
-		AEDE0DB11DFF1AC300C079B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE0DB01DFF1AC300C079B7 /* ViewController.swift */; };
 		AEDE0DB41DFF1AC300C079B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEDE0DB21DFF1AC300C079B7 /* Main.storyboard */; };
 		AEDE0DB61DFF1AC300C079B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEDE0DB51DFF1AC300C079B7 /* Assets.xcassets */; };
 		AEDE0DB91DFF1AC300C079B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEDE0DB71DFF1AC300C079B7 /* LaunchScreen.storyboard */; };
@@ -17,11 +16,11 @@
 /* Begin PBXFileReference section */
 		AEDE0DAB1DFF1AC300C079B7 /* lightningTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lightningTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDE0DAE1DFF1AC300C079B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AEDE0DB01DFF1AC300C079B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AEDE0DB31DFF1AC300C079B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEDE0DB51DFF1AC300C079B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEDE0DB81DFF1AC300C079B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEDE0DBA1DFF1AC300C079B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEDE0DC01DFF1AF600C079B7 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = lightningTalk/MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +37,7 @@
 		AEDE0DA21DFF1AC300C079B7 = {
 			isa = PBXGroup;
 			children = (
+				AEDE0DC01DFF1AF600C079B7 /* MyPlayground.playground */,
 				AEDE0DAD1DFF1AC300C079B7 /* lightningTalk */,
 				AEDE0DAC1DFF1AC300C079B7 /* Products */,
 			);
@@ -55,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				AEDE0DAE1DFF1AC300C079B7 /* AppDelegate.swift */,
-				AEDE0DB01DFF1AC300C079B7 /* ViewController.swift */,
 				AEDE0DB21DFF1AC300C079B7 /* Main.storyboard */,
 				AEDE0DB51DFF1AC300C079B7 /* Assets.xcassets */,
 				AEDE0DB71DFF1AC300C079B7 /* LaunchScreen.storyboard */,
@@ -137,7 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEDE0DB11DFF1AC300C079B7 /* ViewController.swift in Sources */,
 				AEDE0DAF1DFF1AC300C079B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
