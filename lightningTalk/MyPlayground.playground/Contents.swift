@@ -1,46 +1,46 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
-
-//: Playground - noun: a place where people can play
-
-import UIKit
 import PlaygroundSupport
 
-let tableVC = UITableViewController()
-
-class TableDelegate: NSObject {}
-let tableDelegate = TableDelegate()
-
-let colors = [UIColor.green, UIColor.red, UIColor.blue, UIColor.black, UIColor.yellow]
-
-extension TableDelegate: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return colors.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseID", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
-        cell.textLabel?.textColor = colors[indexPath.row]
-        cell.backgroundColor = UIColor.clear
-        return cell
+class ContainerView: UIView {
+    convenience init(frame: CGRect, color: UIColor) {
+        self.init(frame: frame)
+        layer.borderColor = UIColor.green.cgColor
+        layer.borderWidth = 1
+        layer.cornerRadius = 10
+        layer.masksToBounds = true
     }
 }
 
-extension TableDelegate: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75
-    }
-
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        return true
+class CircleView: UIView {
+    convenience init(frame: CGRect, color: UIColor) {
+        self.init(frame: frame)
+        backgroundColor = color
+        layer.cornerRadius = frame.width / 2
     }
 }
 
-tableVC.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseID")
-tableVC.tableView.dataSource = tableDelegate
-tableVC.tableView.delegate = tableDelegate
+let frame = CGRect(x: 0, y: 0, width: 300, height: 600)
+let containerView = ContainerView(frame: frame, color: UIColor.black)
 
-tableVC.tableView.frame = CGRect(x: 0, y: 0, width: 337, height: 650)
-//PlaygroundPage.current.liveView = tableVC.tableView
+let f1 = CGRect(x: 50, y: 50, width: 50, height: 50)
+let f2 = CGRect(x: 130, y: 50, width: 50, height: 50)
+let f3 = CGRect(x: 210, y: 50, width: 50, height: 50)
+
+let v1 = CircleView(frame: f1, color: UIColor.green)
+let v2 = CircleView(frame: f2, color: UIColor.red)
+let v3 = CircleView(frame: f3, color: UIColor.blue)
+
+[v1,v2,v3].forEach { containerView.addSubview($0) }
+
+let animator = UIViewPropertyAnimator(duration: 2.0, curve: .easeIn, animations: nil)
+
+animator.addAnimations {
+    v1.frame.origin.y = 200
+    v2.frame.origin.y = 400
+    v3.frame.origin.y = 500
+}
+
+//animator.startAnimation()
+//PlaygroundPage.current.liveView = containerView
